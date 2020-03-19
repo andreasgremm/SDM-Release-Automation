@@ -31,6 +31,7 @@ Hinter dem Zahnrad-Menu-Icon ist das ```Projekt Managment``` Menu, in dem sich n
 Wenn mehrere Mitarbeiter im Projekt mitarbeiten sollen, sollten diese eingeladen werden.
 ![Mitarbeiter einladen](CDD/Invite_Colleagues.png)
 
+Die Mitarbeiter müssen im Rahmen des Berechtigungskonzeptes in Rollen (Designer, Release-Manager) und/oder Gruppen (Designer-Group, Release-Manager) für das Projekt bzw. das später definierte Release eingeordnet werden.
 ### Endpunkte definieren
 Um CDD funktional mit Automatismen zu füllen, müssen die Endpunkte konfiguriert werden. 
 ![Endpunkte konfigurieren](CDD/Add_Endpoints.png)
@@ -63,5 +64,19 @@ Hier zu sehen die Definition des SDM Releases für unser Beispiel.
 Im Rahmen des Releases werden die Anwendungen und Work-Items konfiguriert, für unsere Anwendung in diesem Release wird eine Version definiert. Hier am Beispiel einer Anwendung "CA Service Catalog".
 ![SDM Version](CDD/Set_Application_Version.png)
 
+## Service-Desk-Manager und GitHub
+Um die Customizing-Einstellungen in GitHub zu versionieren, muss ein Repository auf github.com angelegt werden. Hierzu muss man sich bei github.com registrieren und bekommt einen <gitbenutzer>. Das angelegte Repository bekommt einen frei wählbaren Namen, für die Beschreibung nennen wir es <gitrepository>.
+
+Auf dem SDM-Server im Verzeichnis ```$SDM-Installation/x/y/z``` wird ein lokales Git-Repository mit ```git init``` erzeugt.
+
+Die zu ändernden Dateien werden dann in die richtigen Verzeichnisse kopiert und per ```git add```, ```git commit``` normal bearbeitet.
+Das lokale Repository muss einmalig mit dem erzeugten remote Repository verbunden werden.
+
+```
+git remote add origin https://github.com/<gitbenutzer>/<gitrepository>.git
+git push -u origin master
+```
+
+Danach kann das lokale Verzeichnis ganz normal bearbeitet werden und die entsprechenden Git-Befehle sorgen dann für das Branch-Management und die Synchronisation mit dem Remote-Repository.
 
 
