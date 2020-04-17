@@ -102,6 +102,8 @@ Hierzu wird bei der Anwendungsversion unter "Add Work Items" die Verbindung zu E
 
 ![RallyWorkItems](Rally/Add-Work-Items.png)
 
+**Den Hintergrund erklärt folgendes [Video](https://youtu.be/EKmNq2nFdtg)** aus der Reihe der [CDD Tutorial Videos](https://techdocs.broadcom.com/content/broadcom/techdocs/us/en/ca-enterprise-software/intelligent-automation/automic-continuous-delivery-director-saas/1-0/product-tutorial-videos.html).
+
 Als Parameter wählen wir Attribute der User-Stories aus die hier dargestellt werden sollen.
 
 ![RallyWorkItems](Rally/Add-Work-Item-Parameter.png)
